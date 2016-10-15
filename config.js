@@ -4,7 +4,7 @@
 	expiresIn	-	number(seconds) (28800 => 8h)
 */
 module.exports = {
-	mongoDbUrl: 'mongodb://mongodb:27017/posts',
+	mongoDbUrl: (process.env.isDocker) ? 'mongodb://mongodb:27017/posts' : 'mongodb://localhost:27017/posts',
 	secret: 'secret should not be  disclosed',
 	expiresIn: 28800,
 	jwtExcludeEndpoints: [

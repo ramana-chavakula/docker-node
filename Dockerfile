@@ -3,6 +3,7 @@ FROM node
 MAINTAINER Ramana Murthy Chavakula
 
 ENV PORT=3000
+ENV isDocker=true
 
 COPY . /app
 
