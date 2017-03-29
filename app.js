@@ -8,6 +8,7 @@ let authTokenInterceptor = require('./utils/authTokenInterceptor.js');
 let postRoutes = require('./posts/posts.routes.js');
 let authenticationRoutes = require('./authentication/authentication.routes.js');
 let authentication = require('./authentication/authentication.js');
+let performanceRoutes = require('./performance/performance.routes.js');
 const Config = require('./config.js');
 
 //to serve static files
@@ -21,6 +22,7 @@ app.use(corsHandler);
 app.use(authTokenInterceptor);
 app.use('/', authenticationRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/performance', performanceRoutes);
 
 app.listen(port, function () {
   console.log('Express server started on port : ' + port);

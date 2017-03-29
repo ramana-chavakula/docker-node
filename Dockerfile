@@ -13,4 +13,4 @@ RUN npm install
 
 EXPOSE $PORT
 
-ENTRYPOINT ["node", "app.js"]
+ENTRYPOINT ["node", "cluster.js"]

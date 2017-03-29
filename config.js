@@ -9,7 +9,10 @@ module.exports = {
 	expiresIn: 28800,
 	jwtExcludeEndpoints: [
 		'/signup',
-		'/login'
+		'/login',
+		'/fast',
+		'/delay',
+		'/longrunning'
 	],
 	removeExpiredTokensTimer: 900000
 }
